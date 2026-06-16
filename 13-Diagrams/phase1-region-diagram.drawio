@@ -1,0 +1,39 @@
+<mxfile>
+  <diagram name="Phase 1 - Region Diagram" id="region-diagram">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="800" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <!-- Azure Subscription -->
+        <mxCell id="2" value="Azure Subscription" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="400" y="40" width="300" height="60" as="geometry" />
+        </mxCell>
+        <!-- RG-BlackPhoenix -->
+        <mxCell id="3" value="RG-BlackPhoenix" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="420" y="140" width="260" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="4" value="" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="2" target="3" parent="1" />
+        <!-- East US 2 -->
+        <mxCell id="5" value="East US 2&#10;Identity Region&#10;vnet-identity" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="80" y="260" width="200" height="80" as="geometry" />
+        </mxCell>
+        <!-- West US 2 -->
+        <mxCell id="6" value="West US 2&#10;SOC Region&#10;vnet-soc" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="320" y="260" width="200" height="80" as="geometry" />
+        </mxCell>
+        <!-- Central US -->
+        <mxCell id="7" value="Central US&#10;Attack Region&#10;vnet-attack" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="560" y="260" width="200" height="80" as="geometry" />
+        </mxCell>
+        <!-- South Central US -->
+        <mxCell id="8" value="South Central US&#10;Automation Region&#10;vnet-automation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="800" y="260" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="9" value="" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="3" target="5" parent="1" />
+        <mxCell id="10" value="" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="3" target="6" parent="1" />
+        <mxCell id="11" value="" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="3" target="7" parent="1" />
+        <mxCell id="12" value="" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="3" target="8" parent="1" />
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

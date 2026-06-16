@@ -1,0 +1,34 @@
+<mxfile>
+  <diagram name="Phase 1 - Peering Diagram" id="peering-diagram">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="800" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <!-- Title -->
+        <mxCell id="2" value="Hub-and-Spoke Peering Model&#10;(SOC as Hub)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="350" y="20" width="400" height="40" as="geometry" />
+        </mxCell>
+        <!-- vnet-soc (HUB) -->
+        <mxCell id="3" value="vnet-soc (HUB)&#10;10.2.0.0/16&#10;West US 2" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="430" y="300" width="240" height="100" as="geometry" />
+        </mxCell>
+        <!-- vnet-automation (Top) -->
+        <mxCell id="4" value="vnet-automation&#10;10.4.0.0/16&#10;South Central US" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="440" y="100" width="220" height="80" as="geometry" />
+        </mxCell>
+        <!-- vnet-attack (Left) -->
+        <mxCell id="5" value="vnet-attack&#10;10.3.0.0/16&#10;Central US" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="80" y="310" width="220" height="80" as="geometry" />
+        </mxCell>
+        <!-- vnet-identity (Right) -->
+        <mxCell id="6" value="vnet-identity&#10;10.1.0.0/16&#10;East US 2" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="800" y="310" width="220" height="80" as="geometry" />
+        </mxCell>
+        <!-- Peering Lines -->
+        <mxCell id="7" value="Peering" style="edgeStyle=orthogonalEdgeStyle;strokeWidth=3;strokeColor=#b85450;" edge="1" source="4" target="3" parent="1" />
+        <mxCell id="8" value="Peering" style="edgeStyle=orthogonalEdgeStyle;strokeWidth=3;strokeColor=#b85450;" edge="1" source="5" target="3" parent="1" />
+        <mxCell id="9" value="Peering" style="edgeStyle=orthogonalEdgeStyle;strokeWidth=3;strokeColor=#b85450;" edge="1" source="3" target="6" parent="1" />
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

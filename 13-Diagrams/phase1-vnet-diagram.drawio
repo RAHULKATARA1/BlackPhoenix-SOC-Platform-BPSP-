@@ -1,0 +1,46 @@
+<mxfile>
+  <diagram name="Phase 1 - VNet Diagram" id="vnet-diagram">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <!-- vnet-identity -->
+        <mxCell id="2" value="vnet-identity&#10;10.1.0.0/16&#10;East US 2" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="80" y="60" width="260" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="3" value="victim-subnet&#10;10.1.2.0/24" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="110" y="200" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4" value="" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="2" target="3" parent="1" />
+        <!-- vnet-soc -->
+        <mxCell id="5" value="vnet-soc&#10;10.2.0.0/16&#10;West US 2" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="420" y="60" width="260" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="6" value="siem-subnet&#10;10.2.3.0/24" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="450" y="200" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7" value="" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="5" target="6" parent="1" />
+        <!-- vnet-attack -->
+        <mxCell id="8" value="vnet-attack&#10;10.3.0.0/16&#10;Central US" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="760" y="60" width="260" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="9" value="attack-subnet&#10;10.3.1.0/24" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="770" y="200" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="10" value="victim-subnet&#10;10.3.2.0/24" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="770" y="290" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="11" value="" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="8" target="9" parent="1" />
+        <mxCell id="12" value="" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="8" target="10" parent="1" />
+        <!-- vnet-automation -->
+        <mxCell id="13" value="vnet-automation&#10;10.4.0.0/16&#10;South Central US" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="1100" y="60" width="260" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="14" value="automation-subnet&#10;10.4.3.0/24" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="1130" y="200" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="15" value="" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="13" target="14" parent="1" />
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

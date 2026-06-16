@@ -1,0 +1,34 @@
+# Phase 1 – Validation Log
+
+## Date
+
+2026-06-16
+
+---
+
+## Resource Group
+
+```
+Command: az group show --name RG-BlackPhoenix -o table
+Result: [PASTE OUTPUT HERE]
+```
+
+## VNets
+
+```
+Command: az network vnet list --resource-group RG-BlackPhoenix -o table
+Result: [PASTE OUTPUT HERE]
+```
+
+## NSGs
+
+```
+Command: az network nsg list --resource-group RG-BlackPhoenix -o table
+Result: [PASTE OUTPUT HERE]
+```
+
+---
+
+## Status
+
+□ All validations passed
