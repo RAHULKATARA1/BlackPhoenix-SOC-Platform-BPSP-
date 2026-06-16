@@ -1,0 +1,69 @@
+<mxfile>
+  <diagram name="Phase 2 - Traffic Flow" id="traffic-flow">
+    <mxGraphModel dx="1000" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1000" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <!-- Title -->
+        <mxCell id="t1" value="BlackPhoenix SOC – Traffic Flow" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=20;" vertex="1" parent="1">
+          <mxGeometry x="250" y="20" width="500" height="40" as="geometry" />
+        </mxCell>
+        <!-- Kali -->
+        <mxCell id="kali" value="bp-kali&#10;10.3.1.10&#10;(Attacker)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="380" y="80" width="200" height="70" as="geometry" />
+        </mxCell>
+        <!-- Windows Targets -->
+        <mxCell id="win" value="bp-winserver (10.1.2.30)&#10;bp-win10 (10.1.2.20)&#10;(Victims)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="360" y="220" width="240" height="70" as="geometry" />
+        </mxCell>
+        <!-- Ubuntu -->
+        <mxCell id="ubuntu" value="bp-ubuntu&#10;10.3.2.40&#10;(Linux Victim)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="680" y="220" width="180" height="70" as="geometry" />
+        </mxCell>
+        <!-- Wazuh -->
+        <mxCell id="wazuh" value="bp-wazuh&#10;10.2.3.50&#10;(SIEM – Agent)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="250" y="380" width="200" height="70" as="geometry" />
+        </mxCell>
+        <!-- Splunk -->
+        <mxCell id="splunk" value="bp-splunk&#10;10.2.3.60&#10;(SIEM – Search)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="520" y="380" width="200" height="70" as="geometry" />
+        </mxCell>
+        <!-- TheHive -->
+        <mxCell id="thehive" value="bp-thehive&#10;10.4.3.70&#10;(Case Management)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="380" y="540" width="200" height="70" as="geometry" />
+        </mxCell>
+        <!-- Shuffle -->
+        <mxCell id="shuffle" value="bp-shuffle&#10;10.4.3.80&#10;(SOAR Automation)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="380" y="700" width="200" height="70" as="geometry" />
+        </mxCell>
+        <!-- Flow Arrows -->
+        <mxCell id="f1" value="attacks" style="strokeWidth=2;strokeColor=#d6b656;fontStyle=1;fontSize=11;" edge="1" source="kali" target="win" parent="1" />
+        <mxCell id="f2" value="logs (1514)" style="strokeWidth=2;strokeColor=#6c8ebf;fontSize=11;" edge="1" source="win" target="wazuh" parent="1" />
+        <mxCell id="f3" value="logs (9997)" style="strokeWidth=2;strokeColor=#6c8ebf;fontSize=11;" edge="1" source="win" target="splunk" parent="1" />
+        <mxCell id="f4" value="logs (1514)" style="strokeWidth=2;strokeColor=#d6b656;fontSize=11;" edge="1" source="ubuntu" target="wazuh" parent="1" />
+        <mxCell id="f5" value="logs (9997)" style="strokeWidth=2;strokeColor=#d6b656;fontSize=11;" edge="1" source="ubuntu" target="splunk" parent="1" />
+        <mxCell id="f6" value="alerts (9000)" style="strokeWidth=2;strokeColor=#b85450;fontStyle=1;fontSize=11;" edge="1" source="wazuh" target="thehive" parent="1" />
+        <mxCell id="f7" value="triggers (3001)" style="strokeWidth=2;strokeColor=#82b366;fontStyle=1;fontSize=11;" edge="1" source="thehive" target="shuffle" parent="1" />
+        <!-- DNS Arrow -->
+        <mxCell id="dns" value="DNS (53)" style="strokeWidth=1;strokeColor=#999999;dashed=1;fontSize=10;" edge="1" source="win" target="kali" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="200" y="150" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <!-- Flow Labels -->
+        <mxCell id="label1" value="① Attack" style="text;fontSize=12;fontStyle=1;fillColor=#fff2cc;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="100" y="130" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="label2" value="② Log Collection" style="text;fontSize=12;fontStyle=1;fillColor=#dae8fc;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="100" y="330" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="label3" value="③ Alert Forwarding" style="text;fontSize=12;fontStyle=1;fillColor=#f8cecc;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="100" y="500" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="label4" value="④ Automation" style="text;fontSize=12;fontStyle=1;fillColor=#d5e8d4;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="100" y="660" width="110" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

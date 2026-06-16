@@ -1,0 +1,78 @@
+<mxfile>
+  <diagram name="Phase 2 - Network Topology" id="network-topology">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <!-- Title -->
+        <mxCell id="t1" value="BlackPhoenix SOC – Network Topology" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=20;" vertex="1" parent="1">
+          <mxGeometry x="400" y="20" width="500" height="40" as="geometry" />
+        </mxCell>
+        <!-- RG-BlackPhoenix -->
+        <mxCell id="rg" value="RG-BlackPhoenix" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="500" y="80" width="260" height="50" as="geometry" />
+        </mxCell>
+        <!-- East US 2 -->
+        <mxCell id="eus2" value="East US 2 – Identity Region" style="swimlane;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="180" width="280" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="vi" value="vnet-identity&#10;10.1.0.0/16" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" vertex="1" parent="eus2">
+          <mxGeometry x="20" y="40" width="240" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="vs1" value="victim-subnet&#10;10.1.2.0/24" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;" vertex="1" parent="eus2">
+          <mxGeometry x="40" y="110" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ws" value="bp-winserver (10.1.2.30)&#10;bp-win10 (10.1.2.20)" style="text;fontSize=10;" vertex="1" parent="eus2">
+          <mxGeometry x="40" y="155" width="200" height="35" as="geometry" />
+        </mxCell>
+        <!-- West US 2 -->
+        <mxCell id="wus2" value="West US 2 – SOC Region (HUB)" style="swimlane;fillColor=#f8cecc;strokeColor=#b85450;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="380" y="180" width="280" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="vsoc" value="vnet-soc&#10;10.2.0.0/16" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" vertex="1" parent="wus2">
+          <mxGeometry x="20" y="40" width="240" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="ss" value="siem-subnet&#10;10.2.3.0/24" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;" vertex="1" parent="wus2">
+          <mxGeometry x="40" y="110" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="svm" value="bp-wazuh (10.2.3.50)&#10;bp-splunk (10.2.3.60)" style="text;fontSize=10;" vertex="1" parent="wus2">
+          <mxGeometry x="40" y="155" width="200" height="35" as="geometry" />
+        </mxCell>
+        <!-- Central US -->
+        <mxCell id="cus" value="Central US – Attack Region" style="swimlane;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="720" y="180" width="280" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="va" value="vnet-attack&#10;10.3.0.0/16" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" vertex="1" parent="cus">
+          <mxGeometry x="20" y="40" width="240" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="as1" value="attack-subnet&#10;10.3.1.0/24" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;" vertex="1" parent="cus">
+          <mxGeometry x="40" y="110" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="as2" value="victim-subnet&#10;10.3.2.0/24" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;" vertex="1" parent="cus">
+          <mxGeometry x="40" y="160" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="avm" value="bp-kali (10.3.1.10)&#10;bp-ubuntu (10.3.2.40)" style="text;fontSize=10;" vertex="1" parent="cus">
+          <mxGeometry x="40" y="205" width="200" height="35" as="geometry" />
+        </mxCell>
+        <!-- South Central US -->
+        <mxCell id="scus" value="South Central US – Automation Region" style="swimlane;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1060" y="180" width="300" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="vau" value="vnet-automation&#10;10.4.0.0/16" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" vertex="1" parent="scus">
+          <mxGeometry x="20" y="40" width="260" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="aus" value="automation-subnet&#10;10.4.3.0/24" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;" vertex="1" parent="scus">
+          <mxGeometry x="40" y="110" width="220" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="auvm" value="bp-thehive (10.4.3.70)&#10;bp-shuffle (10.4.3.80)" style="text;fontSize=10;" vertex="1" parent="scus">
+          <mxGeometry x="40" y="155" width="220" height="35" as="geometry" />
+        </mxCell>
+        <!-- Connections from RG -->
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="rg" target="eus2" parent="1" />
+        <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="rg" target="wus2" parent="1" />
+        <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="rg" target="cus" parent="1" />
+        <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="rg" target="scus" parent="1" />
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
