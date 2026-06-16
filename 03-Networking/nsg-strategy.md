@@ -86,3 +86,41 @@ Allow only required traffic
 3. Create NSG rules for Attack subnets
 4. Create NSG rules for Automation subnet
 5. Validate with connectivity tests
+
+---
+
+## Admin Access Rules (Phase 2.3)
+
+These rules limit SSH and RDP management access exclusively to the admin IP (`20.207.192.180`).
+
+### Windows Server (Identity)
+
+```bash
+az network nsg rule create \
+--resource-group RG-BlackPhoenix \
+--nsg-name nsg-identity \
+--name allow-rdp-home \
+--priority 100 \
+--source-address-prefixes 20.207.192.180 \
+--source-port-ranges "*" \
+--destination-port-ranges 3389 \
+--access Allow \
+--protocol Tcp \
+--direction Inbound
+```
+
+### Kali Linux (Attack)
+
+```bash
+az network nsg rule create \
+--resource-group RG-BlackPhoenix \
+--nsg-name nsg-attack \
+--name allow-ssh-home \
+--priority 100 \
+--source-address-prefixes 20.207.192.180 \
+--source-port-ranges "*" \
+--destination-port-ranges 22 \
+--access Allow \
+--protocol Tcp \
+--direction Inbound
+```

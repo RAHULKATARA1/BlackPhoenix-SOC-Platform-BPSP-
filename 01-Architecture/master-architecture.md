@@ -31,7 +31,7 @@ VMs:
 
 | VM | Region | Size | Role |
 | --- | --- | --- | --- |
-| bp-winserver | East US 2 | B2s | AD + DNS |
+| bp-winserver | East US 2 | Standard_DC2ds_v3 | AD + DNS |
 | bp-win10 | East US 2 | B2s | Endpoint |
 | bp-wazuh | West US 2 | B2s | SIEM |
 | bp-splunk | West US 2 | B2s | SIEM |
